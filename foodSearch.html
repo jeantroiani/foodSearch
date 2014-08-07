@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Easy search</title>
+		<link href= "public/style/stylesheet.css" rel="stylesheet">
+		<link href= "public/style/css_reset.css">
+		<script src="public/javascript/lib/jquery-2.1.1.js"></script>
+		<script src="public/javascript/lib/js_foodSearch.js"></script>
+		<script src="public/javascript/mustache.js"></script>
+	</head>
+	
+	<body>
+		<header>
+		<h1>FoodSearch</h1>
+		<h2>Search for the greatest venues around the world</h2>
+		</header>
+			<div id='forms'>
+			<form>
+				<spam class="form_title">Location:	</spam><input id="location"  type='text' size'20' name="location" 	 placeholder='eg.City or postcode'> <br>
+				<spam class="form_title">Search for:</spam><input id="search_for"type='text' size'20' name="search_for"  placeholder='eg.Hotels, Cocktails, Hamburgers'>
+				<button name="search" >Submit</button>
+			</form>
+		</div><!--end of forms-->
+			<ul id='list_item'>
+			</ul>
+
+		<footer>
+			<h2>Powered by Foursquare</h2>
+			<h2>Built by Jean Troiani jeantroiani(at)icloud.com</h2>
+		</footer>
+	</body>
+
+</html>
+	
+
+
+
+<template id='venue_template'>
+
+	<li>
+		<div id="venue_name">		{{name}}						</div><br>
+		<div id="venue_address">{{location.address}}</div>
+	</li>
+
+</template>
